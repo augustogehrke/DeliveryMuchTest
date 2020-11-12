@@ -101,3 +101,24 @@ npm run test
 **test/unit/recipes**
 * Verifica se a função getGif está retornando um link de um gif
 * Verifica se a função formatIngredients está formatando corretamente em array os ingredientes recebidos
+
+### Subindo a api usando Docker
+
+**Necessário ter instalado o Docker**
+
+**Comando para criar a imagem do container:** 
+
+```sh
+docker build -t api-augustogehrke-image .
+```
+
+**Comando para criar o container da imagem:** 
+
+```sh
+docker run --name api-augustogehrke -p 80:3000 -d api-augustogehrke-image 
+```
+
+Com isso a aplicação estará rodando na porta 80
+
+Exemplo de chamada: http://172.19.0.1/recipes?i=onions,garlic
+OBS: Troque para seu ip
