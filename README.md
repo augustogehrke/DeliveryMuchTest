@@ -36,3 +36,48 @@ Verifica se todo o projeto está seguindo o padrão definido, caso não, informa
 npm run lint-fix
 ```
 Verifica se todo o projeto está seguindo o padrão definido, caso não, realiza a correção automática do que for possível e informa quais problemas ainda precisam ser resolvidos.
+
+### ROTAS
+
+**[GET] /recipes**: Busca de receitas conforme os ingredientes fornecidos.
+
+* i - String - ingredientes para realizar 
+
+**Request:**
+```
+{
+  i: onions,garlic
+}
+```
+
+**Response:**
+```
+{
+  "keywords": [
+    "onions",
+    "garlic"
+  ],
+  "recipes": [
+    {
+      "title": "Steamed Mussels I",
+      "ingredients": [
+        "garlic",
+        "mussels",
+        "onions"
+      ],
+      "link": "http://allrecipes.com/Recipe/Steamed-Mussels-I/Detail.aspx",
+      "gif": "https://media2.giphy.com/media/3otPosCSQAWOUCZ7J6/giphy.gif?cid=c0fb8eaa173d53247aa0ed5f79be9eaf26ffd2783e83df32&rid=giphy.gif"
+    },
+    {
+      "title": "Braised Beef and Onions",
+      "ingredients": [
+        "allspice",
+        "garlic",
+        "onions"
+      ],
+      "link": "http://www.epicurious.com/recipes/food/views/Braised-Beef-and-Onions-232969",
+      "gif": "https://media2.giphy.com/media/l2JhBOWhKWH7n4c6I/giphy.gif?cid=c0fb8eaa41ae92890ee50bb3cc257f58cdc9834f6399c230&rid=giphy.gif"
+    }
+  ]
+}
+```

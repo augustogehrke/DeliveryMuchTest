@@ -1,8 +1,11 @@
 const express = require('express')
 const cors = require('cors')
+const recipes = require('./src/routes/recipes')
 const app = express()
 const http = require('http')
 app.use(cors())
+
+app.use('/recipes', recipes)
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
