@@ -81,3 +81,23 @@ Verifica se todo o projeto está seguindo o padrão definido, caso não, realiza
   ]
 }
 ```
+
+### TESTES UNITÁRIOS
+
+O projeto possui testes unitários.
+
+**Execução dos testes**
+
+```sh
+npm run test
+```
+
+**Testes implementados**
+
+**tests/unit/services**
+* Verificação se a API Recipe Puppy está online
+* Verificação se a API Giphy está online
+
+**test/unit/recipes**
+* Verifica se a função getGif está retornando um link de um gif
+* Verifica se a função formatIngredients está formatando corretamente em array os ingredientes recebidos

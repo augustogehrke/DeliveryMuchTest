@@ -6,7 +6,8 @@
     "start": "node app",
     "dev": "nodemon app",
     "lint": "./node_modules/.bin/eslint .",
-    "lint-fix": "./node_modules/.bin/eslint . --fix"
+    "lint-fix": "./node_modules/.bin/eslint . --fix",
+    "test": "jest"
   },
   "author": "augusto.gehrke",
   "private": false,
@@ -15,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.6"
   },
   "devDependencies": {
